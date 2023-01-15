@@ -14,6 +14,14 @@ function index(req, res){
   })
 }
 
+function newPoll(req, res){
+  res.render('polls/new', {
+    title: "Create Poll"
+  })
+
+}
+
 export {
   index,
+  newPoll as new,
 }
