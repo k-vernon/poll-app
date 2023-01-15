@@ -12,7 +12,10 @@ const choiceSchema = new Schema ({
 
 
 const pollSchema = new Schema({
-  question: String,
+  question: { 
+    type: String,
+    required: true
+  },
   description: String,
   choices:[choiceSchema],
   topic: { type: Schema.Types.ObjectId, ref: "Topic" },

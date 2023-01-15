@@ -3,9 +3,39 @@
 <%- include('../partials/nav') %>
 
 <main>
-<h1><%= title %></h1>
+  <div></div>
+  <h1><%= title %></h1>
+  <form id="new form" action="/polls" method="POST">
 
+    <label for="question-input">
+      Question:
+    </label>
+    <input required type ="text" name="question" id="question-input" maxlength="50">
+    
+    <label for="description-text-area">
+      Description:
+    </label>
+    <textarea type="text" name="description" id="description-text-area" 
+    rows="5" cols="60">
+    </textarea>
 
+    <label for="">
+      Choices:
+    </label>
+    <ul name="" id="">
+      
+    </ul>
+    
+    <form>
+    <label for="">
+      Add Choice:
+    </label>
+    <input type ="" name="" id="">
+    <button>Add</button>
+    </form>
+
+    <button type="submit">Add Poll</button>
+  </form>
 </main>
 
 <%- include('../partials/footer') %>
