@@ -47,5 +47,9 @@ a:hover{
   color: rgb(61, 102, 120);
 }
 
+main {
+  color: black;
+  padding-left: 220px;
+}
 
 
