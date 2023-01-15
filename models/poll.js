@@ -11,7 +11,6 @@ const choiceSchema = new Schema ({
 })
 
 
-
 const pollSchema = new Schema({
   question: String,
   description: String,
