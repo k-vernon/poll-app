@@ -1,0 +1,10 @@
+main {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding-left: 220px;
+  margin: 10px 10px;
+  justify-content: center;
+  flex-direction: column;
+  color: black;
+}
