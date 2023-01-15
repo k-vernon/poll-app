@@ -12,30 +12,49 @@ html {
 }
 
 body {
-  background-color: #1a1a1a;
+  background-color: #e6e6e6;
   color: #f6f6f6;
   /* Use a system font, if none are available use any found sans-sarif font */
   font-family: system-ui, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 
     'Helvetica Neue', sans-serif;
   margin: 0;
+  min-height: 1000px;
 }
 
 nav {
+  display: flex;
   background-color: #f6f6f6;
   color: #1a1a1a;
-  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  padding: 10px;
-  min-height: 60px;
+  position: fixed;
+  padding: 20px 0px;
+  left: 0;
+  top: 0;
+  z-index: 9999;
+  width: 220px; 
+  height: 100%;
+}
+
+a{
+  text-decoration: none;
+  color: black;
+}
+
+a:hover{
+  text-decoration: none;
+  color: rgb(61, 102, 120);
 }
 
 main {
   display: flex;
   align-items: center;
+  position: relative;
+  padding-left: 220px;
+  margin: 10px 10px;
   justify-content: center;
   flex-direction: column;
+  color: black;
 }
 
-.right {
-  margin-left: auto;
-}
