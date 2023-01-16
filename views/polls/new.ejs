@@ -3,39 +3,40 @@
 <%- include('../partials/nav') %>
 
 <main>
-  <div></div>
   <h1><%= title %></h1>
-  <form id="new form" action="/polls" method="POST">
+  <div>
+  <form id="poll-form" action="/polls" method="POST"></form>
 
-    <label for="question-input">
-      Question:
-    </label>
-    <input required type ="text" name="question" id="question-input" maxlength="50">
-    
-    <label for="description-text-area">
-      Description:
-    </label>
-    <textarea type="text" name="description" id="description-text-area" 
-    rows="5" cols="60">
-    </textarea>
+  <label form="poll-form" for="question-input">
+    Question:
+  </label>
+  <input form="poll-form" required type ="text" name="question" id="question-input" maxlength="50">
+  
+  <label form="poll-form" for="description-text-area">
+    Description:
+  </label>
+  <textarea form="poll-form" type="text" name="description" id="description-text-area" 
+  rows="5" cols="60">
+  </textarea>
 
-    <label for="choices-input">
-      Choices:
-    </label>
-    <ul name="choices" id="choices-input">
-      
-    </ul>
-    
-    <form>
-    <label for="add-choice-input">
-      Add Choice:
-    </label>
-    <input type ="text" name="add-choice" id="add-choice-input">
-    <button>Add</button>
-    </form>
+  <label form="poll-form" for="choices-input">
+    Choices:
+  </label>
+  <ul form="poll-form" name="choices" id="choices-input">
+      <%# poll.choices.forEach(choice => { %> 
+        <li><%#= choice.text %></li>
+      <%# }) %> 
+  </ul>
+  
+  <form id="choices-form" action="/polls/new" method="POST"></form>
+  <label form="choices-form" for="add-choice-input">
+    Add Choice:
+  </label>
+  <input form="choices-form" type ="text" name="addChoice" id="add-choice-input">
+  <button>Add</button>
 
-    <button type="submit">Add Poll</button>
-  </form>
+  <button form="poll-form" type="submit">Add Poll</button>
+  </div>
 </main>
 
 <%- include('../partials/footer') %>

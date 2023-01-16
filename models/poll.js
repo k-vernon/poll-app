@@ -5,8 +5,6 @@ const Schema = mongoose.Schema
 const choiceSchema = new Schema ({
   text: {
     type: String,
-    minlength: 1,
-    maxlength: 30,
   }
 })
 
