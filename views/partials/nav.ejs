@@ -8,7 +8,7 @@
     <nav>
       <a id="top-nav"
         href="/" <%- title === "Profile" ? 'class="active"' : "" %>
-      >
+        >
         Home
       </a>
       
@@ -16,23 +16,23 @@
 
         <a id="top-nav"
           href="/profiles" <%- title === "Profile" ? 'class="active"' : "" %>
-        >
+          >
           Profile
         </a>
         <a id="top-nav"
           href="/profile/favorites" <%- title === "Favorites" ? 'class="active"' : "" %>
-        >
+          >
           Favorites
         </a>
       <% } %>
       <a id="top-nav"
         href="/polls" <%- title === "Favorites" ? 'class="active"' : "" %>
-      >
+        >
       All Polls
       </a>
       <a id="top-nav"
         href="/polls/new" <%- title === "Favorites" ? 'class="active"' : "" %>
-      >
+        >
         Create Poll
       </a>
     </nav>
@@ -41,20 +41,22 @@
         <button type="submit">Logout</button>
       </a>
     <% } else { %>
-    <div 
-      id="g_id_onload"
-      data-client_id="<%= googleClientID %>"
-      data-login_uri="/auth/google"
-      data-auto_prompt="false"
-    ></div>
-    <div 
-      class="g_id_signin"
-      data-type="standard"
-      data-size="large"
-      data-theme="outline"
-      data-text="sign_in_with"
-      data-shape="rectangular"
-      data-logo_alignment="left"
-    ></div>
+      <div 
+        id="g_id_onload"
+        data-client_id="<%= googleClientID %>"
+        data-login_uri="/auth/google"
+        data-auto_prompt="false"
+        >
+      </div>
+      <div 
+        class="g_id_signin"
+        data-type="standard"
+        data-size="large"
+        data-theme="outline"
+        data-text="sign_in_with"
+        data-shape="rectangular"
+        data-logo_alignment="left"
+        >
+      </div>
     <% } %>
   </header>
