@@ -7,68 +7,47 @@
   <div class="sub-title">Please provide your poll information and submit!</div>
   <div class="poll-form">
     <!-- ADD POLL FORM -->
-    <form id="poll-form" action="" method="POST"></form>
+    <form id="poll-form" action="/polls" method="POST">
 
-    <!-- QUESTION FIELD -->
-    <label form="poll-form" for="question-field">
-      <span>Question:</span>
-      <input type="text" name="question-field"/>
-    </label>
-    
-
-    <!-- SELECT TOPIC FIELD -->
-    <label form="poll-form" for="topic-field"><span>Topic:</span>
-
-      <select name="topic-field" class="topic-select">
-        <option value="General">General</option>
-        <option value="Relationships">Relationships</option>
-        <option value="Would You Rather">Would You Rather</option>
-        <option value="Funny">Funny</option>
-      </select>
-    
-    </label>
-     
-    <!-- ADD DESCRIPTION FIELD -->
-    <label form="poll-form" for="description-field">
-      <span>Description:</span>
-      <textarea name="description-field" class="description-textarea">
-      </textarea>
-    </label>
-
-    <!-- CHOICES LIST -->
-    <!-- <label form="poll-form"><span>Choices:</span>
-      <ul>
+      <!-- QUESTION FIELD -->
+      <label form="poll-form">
+        <span>Question:</span>
+        <input required type="text" name="question"/>
+      </label>
       
-      </ul>
-    </label> -->
 
-    <!-- ADD CHOICE FORM -->
-    <!-- <form id="choices-form" action="/polls/new" method="POST"></form> -->
+      <!-- SELECT TOPIC FIELD -->
+      <label><span>Topic:</span>
+        <select name="topic" class="topic-select">
+          <option value="General">General</option>
+          <option value="Relationships">Relationships</option>
+          <option value="Funny">Funny</option>
+          <option value="Would You Rather">Would You Rather</option>
+          
+        </select>
+      </label>
+      
+      <!-- DESCRIPTION FIELD -->
+      <label>
+        <span>Description:</span>
+        <textarea name="description" class="description-textarea"></textarea>
+      </label>
 
-    <!-- <label form="choices-form" for="add-choice-field">
-      <span>Choice Text:</span>
-      <input type="text" name="add-choice-field" class="add-choice-field"/>
-      <a href="">
-        <button class="add-choice-btn">Add Choice</button>
-      </a>
-    </label> -->
-    
-    <label form="poll-form" for="question-field">
-      <span> Choices: 
-        <span style="color: rgb(194, 194, 194); font-size: 12px; font-weight: normal;">
-          (separate <br> by commas)
+      <!-- CHOICES FIELD -->
+      <label>
+        <span class="choices-text"> Choices: 
         </span>
-      </span>
-      <input type="text" name="question-field"/>
-    </label>
-    
+        <div class="choices-container">
+          <input required type="text" name="choiceOne" class="choices-field" placeholder="Choice 1"/>
+          <input required type="text" name="choiceTwo" class="choices-field" placeholder="Choice 2"/>
+        </div>
+      </label>
+      
 
-    <!-- ADD POLL BUTTON -->
-    <a href="">
-      <button form="poll-form" class="add-poll-btn" type="submit">Add Poll</button>
-    </a>
-    
+      <!-- ADD POLL BUTTON -->
+       <button class="add-poll-btn" type="submit">Add Poll</button>
     </div>
+  </form>
 </main>
 
 <%- include('../partials/footer') %>

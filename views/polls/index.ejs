@@ -1,10 +1,16 @@
 <%- include('../partials/html-head') %>
-<link rel="stylesheet" href="/stylesheets/polls/show.css">
+<link rel="stylesheet" href="/stylesheets/polls/index.css">
 <%- include('../partials/nav') %>
 
 <main>
   <h1><%= title %></h1>
-
+  <div id="polls-container">
+    <% polls.forEach(poll => { %>
+      <div href="/polls/<%= poll._id %>">
+        <h2><%= poll.question %></h2>
+      </div>
+    <% }) %>
+  </div>
 </main>
 
 <%- include('../partials/footer') %>

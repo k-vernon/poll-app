@@ -31,6 +31,7 @@ span {
   font-weight: bold;
 }
 
+
 input {
   display: flex;
   flex-direction: column;
@@ -46,6 +47,18 @@ select{
 	padding: 8px 8px;
 }
 
+.choices-container{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-left: 17px;
+  gap: 10px;
+}
+
+input::placeholder{
+  opacity: 0.3;
+  text-align: left;
+}
 
 select{
   cursor: pointer;
@@ -57,11 +70,6 @@ textarea{
 	height: 130px;
 }
 
-ul {
-  list-style: circle;
-  cursor: pointer;
-
-}
 
 button{
   display: inline-block;
@@ -75,20 +83,6 @@ button{
   padding: 10px 10px 10px 10px;
   text-align: center;
   width: 100px;
-}
-
-.add-choice-field {
-  border-top-right-radius: 0px;
-  border-bottom-right-radius: 0px;
-  width: 35%;
-}
-
-.add-choice-btn {
-  padding: 8px 8px;
-  font-size: 12px;
-  border-radius: 0px;
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
 }
 
 
