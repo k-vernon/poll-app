@@ -8,7 +8,7 @@ router.get("/", pollsCtrl.index)
 router.get("/new", pollsCtrl.new)
 
 
-router.post("/", pollsCtrl.addToChoices)
+router.post("/choices", pollsCtrl.addToChoices)
 
 export {
   router

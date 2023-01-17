@@ -9,16 +9,12 @@ main > h1 {
   font-weight: bold;
 }
 
-.limit-text {
-  display: block;
- 
-}
 
 .poll-form{
 	width: 600px;
   font-size: 15px;
-  margin-top: 110px;
-  margin-left: 605px;
+  margin-top: 6%;
+  margin-left: 35%;
 	padding: 10px 10px;
   transform: scale(1.2);
 }
@@ -32,7 +28,7 @@ label{
 span {
   padding: 6px 0px 0px 0px;
 	width: 100px;
-
+  font-weight: bold;
 }
 
 input {
@@ -101,6 +97,7 @@ button{
   color: white;
   margin-top: 20px;
   margin-left: 30%;
+  font-weight: bold;
   
 }
 

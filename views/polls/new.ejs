@@ -36,27 +36,33 @@
     </label>
 
     <!-- CHOICES LIST -->
-    <label form="poll-form"><span>Choices:</span>
+    <!-- <label form="poll-form"><span>Choices:</span>
       <ul>
-        <li>hey</li>
-        <li>hey</li>
-        <li>hi</li>
-        <li>hi</li>
+      
       </ul>
-    </label>
+    </label> -->
 
     <!-- ADD CHOICE FORM -->
-    <form id="choices-form" action="" method="POST"></form>
+    <!-- <form id="choices-form" action="/polls/new" method="POST"></form> -->
 
-    <label form="choices-form" for="add-choice-field">
+    <!-- <label form="choices-form" for="add-choice-field">
       <span>Choice Text:</span>
       <input type="text" name="add-choice-field" class="add-choice-field"/>
       <a href="">
         <button class="add-choice-btn">Add Choice</button>
       </a>
+    </label> -->
+    
+    <label form="poll-form" for="question-field">
+      <span> Choices: 
+        <span style="color: rgb(194, 194, 194); font-size: 12px; font-weight: normal;">
+          (separate <br> by commas)
+        </span>
+      </span>
+      <input type="text" name="question-field"/>
     </label>
     
- 
+
     <!-- ADD POLL BUTTON -->
     <a href="">
       <button form="poll-form" class="add-poll-btn" type="submit">Add Poll</button>

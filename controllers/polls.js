@@ -21,15 +21,11 @@ function newPoll(req, res){
 }
 
 function addToChoices(req, res){
-  // let choice = req.body.addChoice
-  // Poll.find({})
-  // .then(poll => {
-  //   poll.choices.push(choice)
-  //   poll.save()
-  // })
-  // .then(() => {
-  //   res.redirect('/polls/new')
-  }
+  Poll.choices.push(req.body)
+  
+}
+
+
  
 
 export {

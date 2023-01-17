@@ -25,8 +25,6 @@ header {
   background-color: #f4f4f4;
   color: #1a1a1a;
   flex-direction: column;
-  /* justify-content: space-between; */
-  /* align-items: center; */
   position: fixed;
   left: 0;
   top: 0;
@@ -39,7 +37,6 @@ header {
 #icon {
   text-decoration: none;
   color: black;
-  transition: all 0.3s ease 0s;
   cursor: pointer;
   text-align: center;
   padding: 50px 0px;
@@ -55,7 +52,7 @@ nav > a{
   text-decoration: none;
   color: black;
   margin-bottom: 0px;
-  transition: all 0.3s ease 0s;
+  transition: all 1s ease 0s;
   cursor: pointer;
   text-align: center;
   padding: 15px;
@@ -100,7 +97,6 @@ header > a > button{
   margin-bottom: 20px;
   text-align: center;
   width: 100px;
-  transition: all 0.3s ease 0s;
 }
 
 button:hover {
