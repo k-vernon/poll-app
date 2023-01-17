@@ -4,6 +4,7 @@ main {
   display: flex;
   position: relative;
   padding-left: 220px;
+  padding-left: 25%;
   padding-right: 70px;
   padding-top: 50px;
   justify-content: center;
@@ -52,8 +53,9 @@ form > button:hover {
   margin-left: 70px;
   width: 650px;
   color: #444;
-
+  z-index: 10;
 }
+
 
 #topic-content{
   display: flex;
@@ -68,17 +70,39 @@ form > button:hover {
   border-radius: 20px;
   text-align: center;
   justify-content: center;
- 
 }
 
-#topic-content > p{
+#topics-container-popup {
+  display: flex;
+  margin-left: 70px;
+  margin-bottom: 74px;
+  width: 650px;
+  color: #444;
+  position: absolute;
+  z-index: 5;
+}
+
+#topic-content-popup{
   display: flex;
   flex-direction: column;
-  font-size: 80px;
+  background: rgb(149, 149, 149);
+  margin: 8px 8px;
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  width: 250px;
+  height: 140px;
+  box-shadow: rgba(213, 217, 217, .5) 0 2px 5px 0;
+  border-radius: 20px;
+  text-align: center;
   justify-content: center;
-  position: relative;
-  
 }
+
+#topic-content:hover {
+  background-color: rgb(244, 244, 244);
+  transition: all 0.3s ease 0s;
+}
+
+
 
 #newest-polls {
   display: flex;
@@ -103,6 +127,12 @@ form > button:hover {
   justify-content: center;
 }
 
+#newest-polls > a {
+  margin: 0px 0px 30px 30px;
+  position: absolute;
+  bottom: 0;
+}
+
 #featured-polls {
   display: flex;
   flex-direction: column;
@@ -119,7 +149,7 @@ form > button:hover {
 
 #featured-polls > a{
   position: absolute;
-  bottom: 0;
+  margin-top: 150px;
   margin-left: 10px;
 }
 
@@ -132,7 +162,7 @@ form > button:hover {
   color: #0f1111;
   cursor: pointer;
   font-size: 13px;
-  padding: 10px 10px 10px 11px;
+  padding: 10px 10px 10px 10px;
   position: relative;
   bottom: 0;
   margin-left: 400px;
@@ -140,4 +170,10 @@ form > button:hover {
   text-align: center;
   width: 100px;
   transition: all 0.3s ease 0s;
+}
+
+#create-poll-btn:hover {
+  background: #f4f4f4;
+	color: #000000;
+
 }

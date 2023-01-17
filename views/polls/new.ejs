@@ -4,39 +4,66 @@
 
 <main>
   <h1><%= title %></h1>
-  <div>
-  <form id="poll-form" action="/polls" method="POST"></form>
+  <div class="sub-title">Please provide your poll information and submit!</div>
+  <div class="poll-form">
+    <!-- ADD POLL FORM -->
+    <form id="poll-form" action="" method="POST"></form>
 
-  <label form="poll-form" for="question-input">
-    Question:
-  </label>
-  <input form="poll-form" required type ="text" name="question" id="question-input" maxlength="50">
-  
-  <label form="poll-form" for="description-text-area">
-    Description:
-  </label>
-  <textarea form="poll-form" type="text" name="description" id="description-text-area" 
-  rows="5" cols="60">
-  </textarea>
+    <!-- QUESTION FIELD -->
+    <label form="poll-form" for="question-field">
+      <span>Question:</span>
+      <input type="text" name="question-field"/>
+      <span class="limit-text">Max</span>
+    </label>
+    
 
-  <label form="poll-form" for="choices-input">
-    Choices:
-  </label>
-  <ul form="poll-form" name="choices" id="choices-input">
-      <%# poll.choices.forEach(choice => { %> 
-       <!-- <li><%#= choice.text %></li> -->
-      <%# }) %> 
-  </ul>
-  
-  <form id="choices-form" action="/polls/new" method="POST"></form>
-  <label form="choices-form" for="add-choice-input">
-    Add Choice:
-  </label>
-  <input form="choices-form" type ="text" name="addChoice" id="add-choice-input">
-  <button>Add</button>
+    <!-- SELECT TOPIC FIELD -->
+    <label form="poll-form" for="topic-field"><span>Topic:</span>
 
-  <button form="poll-form" type="submit">Add Poll</button>
-  </div>
+      <select name="topic-field" class="topic-select">
+        <option value="General">General</option>
+        <option value="Relationships">Relationships</option>
+        <option value="Would You Rather">Would You Rather</option>
+        <option value="Funny">Funny</option>
+      </select>
+    
+    </label>
+     
+    <!-- ADD DESCRIPTION FIELD -->
+    <label form="poll-form" for="description-field">
+      <span>Description:</span>
+      <textarea name="description-field" class="description-textarea">
+      </textarea>
+    </label>
+
+    <!-- CHOICES LIST -->
+    <label form="poll-form" ><span>Choices:</span>
+      <ul>
+        <li>hey</li>
+        <li>hey</li>
+        <li>hi</li>
+        <li>hi</li>
+      </ul>
+    </label>
+
+    <!-- ADD CHOICE FORM -->
+    <form id="choices-form" action="" method="POST"></form>
+
+    <label form="choices-form" for="add-choice-field">
+      <span>Choice Text:</span>
+      <input type="text" name="add-choice-field" class="add-choice-field"/>
+      <a href="">
+        <button class="add-choice-btn">Add Choice</button>
+      </a>
+    </label>
+    
+ 
+    <!-- ADD POLL BUTTON -->
+    <a href="">
+      <button form="poll-form" class="add-poll-btn" type="submit">Add Poll</button>
+    </a>
+    
+    </div>
 </main>
 
 <%- include('../partials/footer') %>
