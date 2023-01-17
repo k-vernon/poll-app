@@ -3,29 +3,39 @@
   <% } %>
 </head>
 <body>
-  <nav>
-    <i class="fa-solid fa-square-poll-vertical fa-4x" style="--fa-primary-color: blue;"></i>
-    <a 
-      href="/profile" <%- title === "Profile" ? 'class="active"' : "" %>
-    >
-      Profile
-    </a>
-    <a 
-      href="/profile/favorites" <%- title === "Favorites" ? 'class="active"' : "" %>
-    >
-      Favorites
-    </a>
-    <a 
-      href="/polls" <%- title === "Favorites" ? 'class="active"' : "" %>
-    >
-      All Polls
-    </a>
-    <a 
-      href="/polls/new" <%- title === "Favorites" ? 'class="active"' : "" %>
-    >
-      Create Poll
-    </a>
+  <header>
+    <a id="icon" href="/"><i href="/index" class="fa-solid fa-square-poll-vertical fa-4x" style="--fa-primary-color: blue;"></i></a>
+    <nav>
+      <a id="top-nav"
+        href="/" <%- title === "Profile" ? 'class="active"' : "" %>
+      >
+        Home
+      </a>
+      
+      <% if (user) { %>
 
+        <a id="top-nav"
+          href="/profiles" <%- title === "Profile" ? 'class="active"' : "" %>
+        >
+          Profile
+        </a>
+        <a id="top-nav"
+          href="/profile/favorites" <%- title === "Favorites" ? 'class="active"' : "" %>
+        >
+          Favorites
+        </a>
+      <% } %>
+      <a id="top-nav"
+        href="/polls" <%- title === "Favorites" ? 'class="active"' : "" %>
+      >
+      All Polls
+      </a>
+      <a id="top-nav"
+        href="/polls/new" <%- title === "Favorites" ? 'class="active"' : "" %>
+      >
+        Create Poll
+      </a>
+    </nav>
     <% if (user) { %>
       <a href="/auth/logout">
         <button type="submit">Logout</button>
@@ -47,4 +57,4 @@
       data-logo_alignment="left"
     ></div>
     <% } %>
-  </nav>
+  </header>

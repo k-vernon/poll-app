@@ -3,10 +3,29 @@
 <%- include('./partials/nav') %>
 
 <main>
-  <h1>Poll App</h1>
+  <!-- <h1>Poll App</h1> -->
   <% if (user) { %>
-    <h2>Welcome back, <%=user.profile.name%>!</h2>
+    <h2 id="welcome"> Welcome back, <%=user.profile.name%>!</h4>
   <% } %>
+  <form>
+  <input id="search-input" autocomplete="off" placeholder="Search" type="text">
+  <button><i class="fa-solid fa-magnifying-glass fa-2x"></i></button>
+  </form>
+  <h2 id="topics-title">Topics</h2>
+  <section id="topics-container">
+    <div id="topic-content"><i class="fa-solid fa-info fa-2x"></i></div>
+    <div id="topic-content"><i class="fa-solid fa-heart fa-2x"></i></div>
+    <div id="topic-content"><i class="fa-solid fa-question fa-2x"></i></div>
+    <div id="topic-content"><i class="fa-regular fa-face-laugh-squint fa-2x"></i></div>
+  </section>
+  <section id="newest-polls">
+    <h2>Newest Polls</h3>
+  </section>
+  <section id="featured-polls">
+    <h2>Featured Polls</h2>
+    <a id="featured-show-more" href="/polls"><p>Show More...</p></a>
+  </section>
+  <a href="/polls/new"><button id="create-poll-btn">Create Poll</button></a>
 </main>
 
 <%- include('./partials/footer') %>

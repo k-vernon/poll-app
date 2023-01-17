@@ -12,44 +12,102 @@ html {
 }
 
 body {
-  background-color: #e6e6e6;
+  background-color: #efefef;
   color: #f6f6f6;
   /* Use a system font, if none are available use any found sans-sarif font */
   font-family: system-ui, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 
     'Helvetica Neue', sans-serif;
   margin: 0;
-  min-height: 1000px;
+  min-height: 800px;
 }
 
-nav {
+header {
   display: flex;
-  background-color: #f6f6f6;
+  background-color: #f4f4f4;
   color: #1a1a1a;
   flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
+  /* justify-content: space-between; */
+  /* align-items: center; */
   position: fixed;
-  padding: 20px 0px;
   left: 0;
   top: 0;
   z-index: 9999;
   width: 220px; 
   height: 100%;
+  text-align: center;
 }
 
-a{
+#icon {
   text-decoration: none;
   color: black;
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  text-align: center;
+  padding: 50px 0px;
 }
 
-a:hover{
+nav{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+nav > a{
   text-decoration: none;
+  color: black;
+  margin-bottom: 0px;
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  text-align: center;
+  padding: 15px;
+}
+
+nav > a:hover{
+  text-decoration: none;
+  transition: all 0.3s ease 0s;
   color: rgb(61, 102, 120);
+  background-color: #fff;
 }
 
 main {
   color: black;
   padding-left: 220px;
 }
+
+header > div {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 0;
+  box-shadow: rgba(213, 217, 217, .5) 0 2px 5px 0;
+  margin-bottom: 20px;
+  margin-left: 4px;
+}
+
+header > a > button{
+  display: inline-block;
+  background-color: #fff;
+  border: 1px solid #d5d9d9;
+  border-radius: 8px;
+  box-shadow: rgba(213, 217, 217, .5) 0 2px 5px 0;
+  color: #0f1111;
+  cursor: pointer;
+  font-size: 13px;
+  padding: 10px 10px 10px 11px;
+  position: absolute;
+  left: 50%;
+  margin-left: -50px;
+  bottom: 0;
+  margin-bottom: 20px;
+  text-align: center;
+  width: 100px;
+  transition: all 0.3s ease 0s;
+}
+
+button:hover {
+  background-color: #f7fafa;
+}
+
+
 
 
