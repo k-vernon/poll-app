@@ -4,10 +4,10 @@
 
 <main>
   <h1><%= title %></h1>
-  <div class="sub-title">Please provide your poll information and submit!</div>
+  <div class="sub-title">Please provide new information and update your poll!</div>
   <div class="poll-form">
     <!-- ADD POLL FORM -->
-    <form id="poll-form" action="/polls" method="POST">
+    <form id="poll-form" action="/polls/<%= poll._id %>?_method=PUT" method="POST">
 
       <!-- QUESTION FIELD -->
       <label form="poll-form">
@@ -39,14 +39,14 @@
         <span class="choices-text"> Choices: 
         </span>
         <div class="choices-container">
-          <input required type="text" name="choices.choiceOne" class="choices-field" placeholder="Choice 1" value="<%= poll.choices.choiceOne %>"/>
-          <input required type="text" name="choices.choiceTwo" class="choices-field" placeholder="Choice 2" value="<%= poll.choices.choiceTwo %>"/>
+          <input disabled type="text" name="choices.choiceOne" class="choices-field" placeholder="Choice 1" value="<%= poll.choices.choiceOne %>"/>
+          <input disabled type="text" name="choices.choiceTwo" class="choices-field" placeholder="Choice 2" value="<%= poll.choices.choiceTwo %>"/>
         </div>
       </label>
       
 
       <!-- ADD POLL BUTTON -->
-       <button class="edit-poll-btn" type="submit">Edit Poll</button>
+       <button class="edit-poll-btn" type="submit">Update Poll</button>
     </div>
   </form>
 

@@ -13,7 +13,7 @@ function create(req, res){
   Poll.create(req.body)
   .then(poll => {
     console.log("Poll:", poll)
-    res.redirect("/polls")
+    res.redirect(`/polls/${poll._id}`)
   })
   .catch(err => {
     console.log(err)
@@ -65,7 +65,19 @@ function edit(req, res) {
   })
 }
 
- 
+function update(req, res){
+  Poll.findByIdAndUpdate(req.params.id, req.body, {new:true})
+  .then(poll => {
+    res.redirect(`/polls/${poll._id}`)
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect("/")
+  })
+}
+
+
+
 
 export {
   newPoll as new,
@@ -73,4 +85,5 @@ export {
   index,
   show,
   edit,
+  update,
 }
