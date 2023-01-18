@@ -76,6 +76,17 @@ function update(req, res){
   })
 }
 
+function deleteFlight(req, res){
+  Poll.findByIdAndDelete(req.params.id)
+  .then(poll => {
+    res.redirect("/polls")
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect("/")
+  })
+}
+
 
 
 
@@ -86,4 +97,5 @@ export {
   show,
   edit,
   update,
+  deleteFlight as delete,
 }

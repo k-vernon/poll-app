@@ -10,6 +10,7 @@ router.get("/:id", pollsCtrl.show)
 router.get("/:id/edit", isLoggedIn, pollsCtrl.edit)
 router.post("/", pollsCtrl.create)
 router.put("/:id", pollsCtrl.update)
+router.delete("/:id", pollsCtrl.delete)
 
 export {
   router

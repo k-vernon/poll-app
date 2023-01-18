@@ -16,7 +16,10 @@
     </div>
     <% if (poll.author.equals(user?.profile._id)) { %>
     <a href="/polls/<%= poll._id %>/edit"><button>Edit Poll</button></a>
+    <a href="/polls/<%= poll._id %>/?_method=DELETE"><button>Delete Poll</button></a>
+
     <% } %>
+    
   </div>
 </main>
 
