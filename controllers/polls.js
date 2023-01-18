@@ -39,7 +39,7 @@ function show(req, res) {
   Poll.findById(req.params.id)
   .populate("choices")
   .then(poll => {
-    console.log("Error Fix:", poll);
+    console.log("Poll Data:", poll);
     res.render("polls/show", {
       title: "Poll",
       poll,

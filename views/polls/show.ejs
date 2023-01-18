@@ -3,22 +3,29 @@
 <%- include('../partials/nav') %>
 
 <main>
-  <div>
-    <div>
-      <h1><%= poll.question %></h1>
+  <div class="page-container">
+    <div class="edit-btns-container">
+      <% if (poll.author.equals(user?.profile._id)) { %>
+        <a href="/polls/<%= poll._id %>/edit">
+          <button class="edit-btn">Edit Poll</button>
+        </a><br>
+        <a href="/polls/<%= poll._id %>/?_method=DELETE">
+          <button class="delete-btn">Delete Poll</button>
+        </a>
+      <% } %>
     </div>
     <div>
-      <h4><%= poll.description %></h4>
+        <p class="question"><%= poll.question %></p>
+        <p class="description"><%= poll.description %></p>
     </div>
-    <div>
-      <p><%= poll.choices.choiceOne %></p>
-      <p><%= poll.choices.choiceTwo %></p>
-    </div>
-    <% if (poll.author.equals(user?.profile._id)) { %>
-    <a href="/polls/<%= poll._id %>/edit"><button>Edit Poll</button></a>
-    <a href="/polls/<%= poll._id %>/?_method=DELETE"><button>Delete Poll</button></a>
-
-    <% } %>
+    <form class="choices-form">
+      <div class="choices-container">
+        <input class="choice-one" type="radio"><%= poll.choices.choiceOne %></input>
+        <input class="choice-two" type="radio"><%= poll.choices.choiceTwo %></input>
+      </div>
+      <button>Submit</button>
+    </form>
+    
     
   </div>
 </main>
