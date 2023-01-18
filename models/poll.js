@@ -2,8 +2,11 @@ import mongoose from 'mongoose'
 
 const Schema = mongoose.Schema
 
-
-
+const resultsSchema = new Schema ({
+  usersChoiceOne: Number,
+  usersChoiceTwo: Number,
+  total: Number
+})
 
 
 const pollSchema = new Schema({
@@ -24,13 +27,18 @@ const pollSchema = new Schema({
     choiceTwo: String,
     // required: true
   },
-  results: {
-
+  results: { 
+    resultsSchema
   },  
-  author: { type: Schema.Types.ObjectId, ref: "Profile" }
-}, {
-  timestamps: true
-})
+  author: { 
+    type: Schema.Types.ObjectId, ref: "Profile" 
+  },
+  votes: [{
+    type: Schema.Types.ObjectId, ref: "Profile"
+  }]
+},
+  { timestamps: true}
+)
 
 const Poll = mongoose.model('Poll', pollSchema)
 
