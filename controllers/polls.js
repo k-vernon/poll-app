@@ -10,6 +10,8 @@ function newPoll(req, res){
 
 function create(req, res){
   req.body.author = req.user.profile._id
+  req.body.description = req.body.description ? req.body.description : 'No description'
+  
   Poll.create(req.body)
   .then(poll => {
     console.log("Poll:", poll)
