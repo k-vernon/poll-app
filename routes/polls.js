@@ -6,6 +6,7 @@ const router = Router()
 
 router.get("/", pollsCtrl.index)
 router.get("/new", pollsCtrl.new)
+router.get("/:id", pollsCtrl.show)
 
 router.post("/", pollsCtrl.create)
 

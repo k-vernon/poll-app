@@ -5,9 +5,9 @@
 <main>
   <h1><%= title %></h1>
   <div id="polls-container">
-    <% polls.forEach(poll => { %>
-      <div href="/polls/<%= poll._id %>">
-        <h2><%= poll.question %></h2>
+    <% poll.forEach(poll => { %>
+      <div>
+        <a href="/polls/<%= poll._id %>"><h2><%= poll.question %></h2></a>
       </div>
     <% }) %>
   </div>

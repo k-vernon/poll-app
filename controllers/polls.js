@@ -9,14 +9,10 @@ function newPoll(req, res){
 }
 
 function create(req, res){
-  if (req.body.choices) {
-    req.body.choices = req.body.choices.split(', ')
-  }
-  console.log("Log Body", req.body)
+  console.log("Body:", req.body)
   Poll.create(req.body)
-  // .populate("topic")
   .then(poll => {
-    console.log("Log Poll", poll)
+    console.log("Poll:", poll)
     res.redirect('/polls')
   })
   .catch(err => {
@@ -27,10 +23,26 @@ function create(req, res){
 
 function index(req, res){
   Poll.find({})
-  .then(polls => {
+  .then(poll => {
     res.render("polls/index", {
       title: "All Polls",
-      polls: polls,
+      poll,
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect("/")
+  })
+}
+
+function show(req, res) {
+  Poll.findById(req.params.id)
+  .populate("choices")
+  .then(poll => {
+    console.log("Fix Errorrrrr:", poll);
+    res.render("polls/show", {
+      title: "Poll",
+      poll: poll,
     })
   })
   .catch(err => {
@@ -45,4 +57,5 @@ export {
   newPoll as new,
   create,
   index,
+  show,
 }

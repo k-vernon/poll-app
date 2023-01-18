@@ -9,7 +9,7 @@ const Schema = mongoose.Schema
 const pollSchema = new Schema({
   question: { 
     type: String,
-    // required: true
+    required: true
   },
   topic: {
     type: String,
@@ -20,8 +20,9 @@ const pollSchema = new Schema({
     type: String,
   },
   choices: {
-    type: [String],
-    required: true
+    choiceOne: String,
+    choiceTwo: String,
+    // required: true
   },
   results: {
 
