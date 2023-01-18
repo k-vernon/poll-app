@@ -11,7 +11,7 @@
 
       <!-- QUESTION FIELD -->
       <label form="poll-form">
-        <span>Question:</span>
+        <span>Question:<span id="required">*</span></span>
         <input required type="text" name="question"/>
       </label>
       
@@ -35,7 +35,7 @@
 
       <!-- CHOICES FIELD -->
       <label>
-        <span class="choices-text"> Choices: 
+        <span class="choices-text"> Choices:<span id="required">*</span> 
         </span>
         <div class="choices-container">
           <input required type="text" name="choices.choiceOne" class="choices-field" placeholder="Choice 1"/>

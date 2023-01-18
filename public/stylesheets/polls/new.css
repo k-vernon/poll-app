@@ -31,6 +31,10 @@ span {
   font-weight: bold;
 }
 
+#required {
+  color: red;
+}
+
 
 input {
   display: flex;
