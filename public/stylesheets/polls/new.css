@@ -4,8 +4,15 @@ main > h1 {
   text-align: center;
 }
 
-.sub-title{
+.header-text{
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
   text-align: center;
+  margin-bottom: 50px;
+}
+
+.sub-header{
   font-weight: bold;
 }
 
@@ -23,6 +30,7 @@ main > h1 {
 label{
 	display: flex;
 	margin-bottom: 25px;
+  margin-left: 70px;
 }
 
 span {
@@ -39,7 +47,7 @@ span {
 input {
   display: flex;
   flex-direction: column;
-	width: 50%;	
+	width: 60%;	
 }
 
 input,
@@ -49,6 +57,10 @@ select{
 	box-shadow: rgba(213, 217, 217, .5) 0 2px 5px 0;
 	border-radius: 5px;
 	padding: 8px 8px;
+}
+
+.question-field {
+  width: 50%;
 }
 
 .choices-text {
@@ -97,7 +109,7 @@ button{
   background-color: rgb(30, 91, 222);
   color: white;
   margin-top: 20px;
-  margin-left: 30%;
+  margin-left: 40%;
   font-weight: bold;
   
 }

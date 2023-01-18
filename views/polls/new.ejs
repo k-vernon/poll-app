@@ -3,16 +3,18 @@
 <%- include('../partials/nav') %>
 
 <main>
-  <h1><%= title %></h1>
-  <div class="sub-title">Please provide your poll information and submit!</div>
+ 
   <div class="poll-form">
     <!-- ADD POLL FORM -->
     <form id="poll-form" action="/polls" method="POST">
-
+      <div class="header-text">
+        <h1><%= title %></h1>
+        <div class="sub-header">Please provide your poll information and submit!</div>
+      </div>
       <!-- QUESTION FIELD -->
       <label form="poll-form">
         <span>Question:<span id="required">*</span></span>
-        <input required type="text" name="question"/>
+        <input required class="question-field" type="text" name="question"/>
       </label>
       
 

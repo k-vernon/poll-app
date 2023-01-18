@@ -43,6 +43,7 @@ main {
 
 .delete-btn:hover{
   background-color: #ff9494;
+  color: white;
 }
 
 .description{
