@@ -33,7 +33,7 @@ const pollSchema = new Schema({
   author: { 
     type: Schema.Types.ObjectId, ref: "Profile" 
   },
-  votes: [{
+  voters: [{
     type: Schema.Types.ObjectId, ref: "Profile"
   }]
 },

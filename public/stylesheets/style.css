@@ -32,6 +32,7 @@ header {
   width: 220px; 
   height: 100%;
   text-align: center;
+  box-shadow: rgba(193, 197, 197, 0.5) 0 2px 10px 0;
 }
 
 #icon {
