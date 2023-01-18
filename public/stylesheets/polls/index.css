@@ -1,9 +1,37 @@
-#polls-container {
-	width: 600px;
+#page-container {
+	width: 800px;
   font-size: 15px;
-  margin-top: 6%;
-  margin-left: 35%;
-	padding: 10px 10px;
-  background-color: rgb(193, 193, 193);
+  margin-top: 15%;
+  margin-left: 25%;
+	padding: 50px 50px;
+  background-color: #fff;
   transform: scale(1.2);
+  box-shadow: rgba(213, 217, 217, .5) 0 2px 5px 0;
+  border-radius: 8px;
+}
+
+.page-title {
+  margin-left: 20px;
+}
+
+.poll-container {
+  border: 1px solid #d5d9d9;
+  border-radius: 8px;
+  padding: 10px;
+  margin: 20px;
+  
+}
+
+.poll-container:hover {
+  background-color: #f4f4f4;
+  box-shadow: rgba(213, 217, 217, .5) 0 2px 5px 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.box-contents {
+  margin-left: 10px;
+  color: black;
 }

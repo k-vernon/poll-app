@@ -3,11 +3,13 @@
 <%- include('../partials/nav') %>
 
 <main>
-  <h1><%= title %></h1>
-  <div id="polls-container">
+  <div id="page-container">
+    <h1 class="page-title"><%= title %></h1>
     <% poll.forEach(poll => { %>
-      <div>
-        <a href="/polls/<%= poll._id %>"><h2><%= poll.question %></h2></a>
+      <div class="poll-container">
+        <a href="/polls/<%= poll._id %>">
+          <h2 class="box-contents"><%= poll.question %></h2>
+        </a>
       </div>
     <% }) %>
   </div>
