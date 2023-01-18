@@ -41,7 +41,6 @@ function show(req, res) {
   Poll.findById(req.params.id)
   .populate("choices")
   .then(poll => {
-    console.log("Poll Data:", poll);
     res.render("polls/show", {
       title: "Poll",
       poll,
@@ -78,7 +77,8 @@ function update(req, res){
   })
 }
 
-function deleteFlight(req, res){
+function deletePoll(req, res){
+  console.log("Deleted Poll");
   Poll.findByIdAndDelete(req.params.id)
   .then(poll => {
     res.redirect("/polls")
@@ -99,5 +99,5 @@ export {
   show,
   edit,
   update,
-  deleteFlight as delete,
+  deletePoll as delete,
 }

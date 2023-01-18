@@ -9,9 +9,9 @@
         <a href="/polls/<%= poll._id %>/edit">
           <button class="edit-btn">Edit Poll</button>
         </a><br>
-        <a href="/polls/<%= poll._id %>/?_method=DELETE">
-          <button class="delete-btn">Delete Poll</button>
-        </a>
+        <form action="/polls/<%= poll._id %>?_method=DELETE" method="POST">
+            <button class="delete-btn">Delete Poll</button>
+        </form>
       <% } %>
     </div>
     <div>
@@ -20,8 +20,13 @@
     </div>
     <form class="choices-form">
       <div class="choices-container">
-        <input class="choice-one" type="radio"><%= poll.choices.choiceOne %></input>
-        <input class="choice-two" type="radio"><%= poll.choices.choiceTwo %></input>
+        <div class="choice-one" >
+          <input type="radio"><%= poll.choices.choiceOne %></input>
+        </div>
+        <div class="choice-two">
+          <input  type="radio"><%= poll.choices.choiceTwo %>
+        </input>
+        </div>
       </div>
       <button>Submit</button>
     </form>
