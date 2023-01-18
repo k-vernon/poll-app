@@ -2,18 +2,18 @@ import { Poll } from "../models/poll.js";
 
 
 function newPoll(req, res){
-  res.render('polls/new', {
+  res.render("polls/new", {
     title: "Create Poll"
     
   })
 }
 
 function create(req, res){
-  console.log("Body:", req.body)
+  req.body.author = req.user.profile._id
   Poll.create(req.body)
   .then(poll => {
     console.log("Poll:", poll)
-    res.redirect('/polls')
+    res.redirect("/polls")
   })
   .catch(err => {
     console.log(err)
@@ -39,10 +39,24 @@ function show(req, res) {
   Poll.findById(req.params.id)
   .populate("choices")
   .then(poll => {
-    console.log("Fix Errorrrrr:", poll);
+    console.log("Error Fix:", poll);
     res.render("polls/show", {
       title: "Poll",
-      poll: poll,
+      poll,
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect("/")
+  })
+}
+
+function edit(req, res) {
+  Poll.findById(req.params.id)
+  .then(poll => {
+    res.render("polls/edit", {
+      title: "Edit Poll",
+      poll
     })
   })
   .catch(err => {
@@ -58,4 +72,5 @@ export {
   create,
   index,
   show,
+  edit,
 }

@@ -8,12 +8,15 @@
       <h1><%= poll.question %></h1>
     </div>
     <div>
-      <h4><%= poll.description%></h4>
+      <h4><%= poll.description %></h4>
     </div>
     <div>
       <p><%= poll.choices.choiceOne %></p>
       <p><%= poll.choices.choiceTwo %></p>
     </div>
+    <% if (poll.author.equals(user?.profile._id)) { %>
+    <a href="/polls/<%= poll._id %>/edit"><button>Edit Poll</button></a>
+    <% } %>
   </div>
 </main>
 

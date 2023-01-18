@@ -7,7 +7,7 @@ const router = Router()
 router.get("/", pollsCtrl.index)
 router.get("/new", pollsCtrl.new)
 router.get("/:id", pollsCtrl.show)
-
+router.get("/:id/edit", isLoggedIn, pollsCtrl.edit)
 router.post("/", pollsCtrl.create)
 
 export {

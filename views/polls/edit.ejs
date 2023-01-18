@@ -3,8 +3,52 @@
 <%- include('../partials/nav') %>
 
 <main>
-<h1><%= title %></h1>
+  <h1><%= title %></h1>
+  <div class="sub-title">Please provide your poll information and submit!</div>
+  <div class="poll-form">
+    <!-- ADD POLL FORM -->
+    <form id="poll-form" action="/polls" method="POST">
 
+      <!-- QUESTION FIELD -->
+      <label form="poll-form">
+        <span>Question:</span>
+        <input type="text" name="question" value="<%= poll.question %>"/>
+      </label>
+      
+
+      <!-- SELECT TOPIC FIELD -->
+      <label><span>Topic:</span>
+        <select name="topic" class="topic-select">
+          <option value="" diabled selected hidden><%= poll.topic %></option> 
+          <option value="General">General</option>
+          <option value="Relationships">Relationships</option>
+          <option value="Funny">Funny</option>
+          <option value="Would You Rather">Would You Rather</option>
+          
+        </select>
+      </label>
+      
+      <!-- DESCRIPTION FIELD -->
+      <label>
+        <span>Description:</span>
+        <textarea name="description" class="description-textarea"><%= poll.description %></textarea>
+      </label>
+
+      <!-- CHOICES FIELD -->
+      <label>
+        <span class="choices-text"> Choices: 
+        </span>
+        <div class="choices-container">
+          <input required type="text" name="choices.choiceOne" class="choices-field" placeholder="Choice 1" value="<%= poll.choices.choiceOne %>"/>
+          <input required type="text" name="choices.choiceTwo" class="choices-field" placeholder="Choice 2" value="<%= poll.choices.choiceTwo %>"/>
+        </div>
+      </label>
+      
+
+      <!-- ADD POLL BUTTON -->
+       <button class="add-poll-btn" type="submit">Edit Poll</button>
+    </div>
+  </form>
 
 </main>
 

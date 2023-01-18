@@ -1,0 +1,109 @@
+
+main > h1 {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.sub-title{
+  text-align: center;
+  font-weight: bold;
+}
+
+
+.poll-form{
+	width: 600px;
+  font-size: 15px;
+  margin-top: 6%;
+  margin-left: 35%;
+	padding: 10px 10px;
+  transform: scale(1.2);
+}
+
+
+label{
+	display: flex;
+	margin-bottom: 25px;
+}
+
+span {
+  padding: 6px 0px 0px 0px;
+	width: 100px;
+  font-weight: bold;
+}
+
+
+input {
+  display: flex;
+  flex-direction: column;
+	width: 50%;	
+}
+
+input,
+textarea, 
+select{
+	border: 1px solid #d5d9d9;
+	box-shadow: rgba(213, 217, 217, .5) 0 2px 5px 0;
+	border-radius: 5px;
+	padding: 8px 8px;
+}
+
+.choices-text {
+  margin-right: 18px;
+}
+
+.choices-container{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 10px;
+}
+
+input::placeholder{
+  opacity: 0.3;
+  text-align: left;
+}
+
+select{
+  cursor: pointer;
+}
+
+textarea{
+  font-family: Arial, Helvetica, sans-serif;
+	width: 50%;
+	height: 130px;
+}
+
+
+button{
+  display: inline-block;
+  background-color: #fff;
+  border: 1px solid #d5d9d9;
+  border-radius: 8px;
+  box-shadow: rgba(213, 217, 217, .5) 0 2px 5px 0;
+  color: #0f1111;
+  cursor: pointer;
+  font-size: 13px;
+  padding: 10px 10px 10px 10px;
+  text-align: center;
+  width: 100px;
+}
+
+
+.add-poll-btn {
+  background-color: rgb(30, 91, 222);
+  color: white;
+  margin-top: 20px;
+  margin-left: 30%;
+  font-weight: bold;
+  
+}
+
+.add-poll-btn:hover {
+  background-color: rgb(70, 116, 215);
+  color:white;
+}
+
+button:hover{
+	background-color: #f4f4f4;
+	color: #000000;
+}
