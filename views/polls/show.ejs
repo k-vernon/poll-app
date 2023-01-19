@@ -18,17 +18,18 @@
         <p class="question"><%= poll.question %></p>
         <p class="description"><%= poll.description %></p>
     </div>
-    <form class="choices-form">
+    <form class="choices-form" action="/polls/<%=poll._id %>" 
+      method="POST">
       <div class="choices-container">
         <div class="choice-one" >
-          <input type="radio"><%= poll.choices.choiceOne %></input>
+          <input type="radio" name="choiceOne"><%= poll.choices.choiceOne %></input>
         </div>
         <div class="choice-two">
-          <input  type="radio"><%= poll.choices.choiceTwo %>
+          <input  type="radio" name="choiceTwo"><%= poll.choices.choiceTwo %>
         </input>
         </div>
       </div>
-      <button>Submit</button>
+      <button type="submit">Submit</button>
     </form>
     
     

@@ -2,10 +2,12 @@ import mongoose from 'mongoose'
 
 const Schema = mongoose.Schema
 
-const resultsSchema = new Schema ({
-  usersChoiceOne: Number,
-  usersChoiceTwo: Number,
-  total: Number
+const resultSchema = new Schema ({
+  userChoseOne: Boolean,
+  userChoseTwo: Boolean,
+  voter: {
+    type: Schema.Types.ObjectId, ref: "Profile"
+  }
 })
 
 
@@ -27,15 +29,15 @@ const pollSchema = new Schema({
     choiceTwo: String,
     // required: true
   },
-  results: { 
-    resultsSchema
-  },  
+  results: [resultSchema]
+  ,  
   author: { 
     type: Schema.Types.ObjectId, ref: "Profile" 
   },
-  voters: [{
-    type: Schema.Types.ObjectId, ref: "Profile"
-  }]
+  totals: {
+    totalOne: Number,
+    totalTwo: Number, 
+  },
 },
   { timestamps: true}
 )

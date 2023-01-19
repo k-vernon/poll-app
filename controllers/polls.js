@@ -89,7 +89,33 @@ function deletePoll(req, res){
   })
 }
 
-
+function saveResult(req,res){
+  const result = {
+    userChoseOne: req.body.choiceOne === "on" ? true : false,
+    userChoseTwo: req.body.choiceTwo === "on" ? true : false,
+    voter: req.user.profile._id
+  }
+  console.log("Result:", result)
+ 
+  Poll.findById(req.params.id)
+  .then(poll => {
+    poll.results.push(result)
+    poll.totals.totalOne += result.userChoseOne ? 1 : 0
+    poll.totals.totalTwo += result.userChoseTwo ? 1 : 0
+    poll.save()
+    .then(() => {
+      res.redirect(`/polls/${req.params.id}`)
+    })
+    .catch(err => {
+      console.log(err)
+      res.redirect("/")
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect("/")
+  })
+}
 
 
 export {
@@ -100,4 +126,5 @@ export {
   edit,
   update,
   deletePoll as delete,
+  saveResult
 }
