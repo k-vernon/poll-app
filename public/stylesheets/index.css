@@ -163,13 +163,34 @@ a {
   bottom: 0;
 }
 
-#featured-polls {
+#featured-poll {
   display: flex;
   flex-direction: column;
   margin: 15px 0px 0px 0px;
   margin-left: 70px;
   height: 250px;
-  width: 500px
+  width: 500px;
+
+
+}
+
+.featured-poll-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border: 1px solid #d5d9d9;
+  border-radius: 8px;
+  padding: 10px;
+  align-items: center;
+}
+
+.featured-box-contents {
+  font-size: 15px;
+  text-decoration: none;
+}
+
+#featured-votes {
+  align-self: center;
 }
 
 .featured-show-more {

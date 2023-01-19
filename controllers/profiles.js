@@ -1,11 +1,13 @@
+import { Poll } from "../models/poll.js";
 import { Profile } from "../models/profile.js";
 
 
-function show(req, res) {
-  Profile.findById(req.params.id)
-  .populate("polls")
+function index(req, res) {
+  // Profile.findById(req.params.id)
+  // .populate("polls")
+  Poll.find({})
   .then(profile => {
-    res.render("profiles/show", {
+    res.render("profiles/index", {
       title: "Profile",
       profile,
     })
@@ -17,5 +19,5 @@ function show(req, res) {
 }
 
 export {
-  show
+  index
 }

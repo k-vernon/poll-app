@@ -39,9 +39,16 @@
       <p class="newest-show-more">Show More...</p>
     </a>
   </section>
-  <section id="featured-polls">
+  <section id="featured-poll">
     <h2>Featured Poll</h2>
-    <div><%= </div>
+    <% for (let i = 0; i < 1; i++ ){ %>
+      <div class="featured-poll-container">
+        <a  href="/polls/<%= poll._id %>">
+          <h2 class="featured-box-contents"><%= poll[i].question %></h2>
+        </a>
+        <div class="featured-votes">Votes: <%= poll.length %></div>
+      </div>
+    <% } %>
     <a id="featured-show-more" href="/polls"><p>Show More...</p></a>
   </section>
   <a href="/polls/new"><button id="create-poll-btn">Create Poll</button></a>
