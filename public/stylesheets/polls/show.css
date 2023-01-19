@@ -90,3 +90,10 @@ width: 100px;
 font-weight: bold;
 
 }
+
+.see-results {
+  text-decoration: underline;
+  font-size: 12px;
+  margin-top: 20px;
+  color: rgb(41, 42, 44);
+}

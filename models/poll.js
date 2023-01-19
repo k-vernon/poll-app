@@ -5,20 +5,17 @@ const Schema = mongoose.Schema
 const resultSchema = new Schema ({
   userChoseOne: Boolean,
   userChoseTwo: Boolean,
-  voter: {
-    type: Schema.Types.ObjectId, ref: "Profile"
-  }
+  voter: { type: Schema.Types.ObjectId, ref: "Profile" }
 })
 
 const totalSchema = new Schema ({
-  totalOne: {
-    type: Number,
-    default: 0,
-  },
-  totalTwo: {
-    type: Number,
-    default: 0, 
-  }
+  totalOne: { type: Number, default: 0, },
+  totalTwo: { type: Number, default: 0, }
+})
+
+const choiceSchema = new Schema ({
+  choiceOne: { type: String, required: true },
+  choiceTwo: { type: String, required: true },
 })
 
 
@@ -35,15 +32,11 @@ const pollSchema = new Schema({
   description: {
     type: String,
   },
-  choices: {
-    choiceOne: String,
-    choiceTwo: String,
-    // required: true
-  },
+  choices: choiceSchema,
   author: { 
     type: Schema.Types.ObjectId, ref: "Profile" 
   },
-  totals: [totalSchema],
+  totals: totalSchema,
   results: [resultSchema],  
 },
   { timestamps: true}

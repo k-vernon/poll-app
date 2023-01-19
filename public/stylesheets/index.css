@@ -124,11 +124,40 @@ form > button:hover {
   font-weight: 700;
   border-top: none;
   /* border-bottom: 5px solid #efefef; */
-  padding: 10px 0px 20px 0px;
+  padding: 10px 0px 10px 0px;
   justify-content: center;
 }
 
-#newest-polls > a {
+.newest-polls-container {
+  border: 1px solid #d5d9d9;
+  border-radius: 8px;
+  padding: 10px;
+  margin: 0px 20px 10px 20px ;
+  
+}
+
+.newest-polls-container:hover {
+  background-color: #f4f4f4;
+  box-shadow: rgba(213, 217, 217, .5) 0 2px 5px 0;
+}
+
+a {
+  text-decoration: none;
+  color:rgb(51, 105, 180);
+}
+
+.box-contents {
+  font-size: 15px;
+  text-decoration: none;
+}
+
+
+.description {
+  font-size: 11px;
+}
+
+
+.newest-show-more {
   margin: 0px 0px 30px 30px;
   position: absolute;
   bottom: 0;
@@ -143,12 +172,13 @@ form > button:hover {
   width: 500px
 }
 
-#featured-polls > p {
+.featured-show-more {
   font-size: 30px;
   font-weight: 500;
 }
 
 #featured-polls > a{
+  text-decoration: none;
   position: absolute;
   margin-top: 150px;
   margin-left: 10px;

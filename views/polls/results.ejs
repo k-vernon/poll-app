@@ -11,11 +11,16 @@
       <div class="choices-container">
         <div class="choice-one" >
           <div name="choiceOne"><%= poll.choices.choiceOne %> Votes:</div>
-        </div><div><%= poll.totals.totalOne %></div>
+          <div id="total"><%= poll.totals.totalOne %></div>
+        </div>
         <div class="choice-two">
           <div  name="choiceTwo"><%= poll.choices.choiceTwo %> Votes:</div>
-          <div><%= poll.totals.totalTwo %></div>
+          <div id="total"><%= poll.totals.totalTwo %></div>
         </div>
+      </div>
+      <div>
+        <div  name="total-votes">Total Votes:</div>
+        <div id="total"><%= poll.totals.totalOne + poll.totals.totalTwo %> </div>
       </div>
     
   </div>

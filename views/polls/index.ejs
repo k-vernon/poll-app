@@ -6,11 +6,11 @@
   <div id="page-container">
     <h1 class="page-title"><%= title %></h1>
     <% poll.forEach(poll => { %>
-      <div class="poll-container">
-        <a href="/polls/<%= poll._id %>">
+      <a href="/polls/<%= poll._id %>">
+        <div class="poll-container">
           <h2 class="box-contents"><%= poll.question %></h2>
-        </a>
-      </div>
+        </div>
+      </a>
     <% }) %>
   </div>
 </main>

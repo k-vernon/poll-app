@@ -11,6 +11,7 @@ function newPoll(req, res){
 function create(req, res){
   req.body.author = req.user.profile._id
   req.body.description = req.body.description ? req.body.description : 'No description'
+  req.body.totals = {totalOne: 0, totalTwo: 0}
   
   Poll.create(req.body)
   .then(poll => {
@@ -98,14 +99,18 @@ function saveResult(req,res){
   }
   console.log("Result:", result)
   
+
   Poll.findById(req.params.id)
   .then(poll => {
     poll.results.push(result)
-    poll.results.forEach(result => {
-      result.userChoseOne ?
-        (poll.totals.totalOne ? poll.totals.totalOne += 1 : poll.totals.totalOne = 1) :
-        (poll.totals.totalTwo ? poll.totals.totalTwo += 1 : poll.totals.totalTwo = 1)
-    })
+    console.log(poll)
+    // poll.results.userChoseOne === true ? poll.totals.totalOne += 1 : poll.totals.totalTwo += 1
+    if (result.userChoseOne){
+      poll.totals.totalOne++
+    } else {
+      poll.totals.totalTwo++
+    }
+    
     console.log("Vote Totals:", poll.totals)
     console.log("Poll:", poll)
     poll.save()

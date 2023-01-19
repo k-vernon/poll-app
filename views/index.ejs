@@ -26,11 +26,22 @@
   </section> -->
   </div>
   <section id="newest-polls">
-    <h2>Newest Polls</h3>
-    <a id="featured-show-more" href="/polls"><p>Show More...</p></a>
+    <h2>Newest Polls</h2>
+    <% for (let i = 0; i < 2; i++ ){ %>
+      <a  href="/polls/<%= poll._id %>">
+        <div class="newest-polls-container">
+          <h2 class="box-contents"><%= poll[i].question %></h2>
+        </div>
+      </a>
+    <% } %>
+
+    <a id="newest-show-more" href="/polls">
+      <p class="newest-show-more">Show More...</p>
+    </a>
   </section>
   <section id="featured-polls">
-    <h2>Featured Polls</h2>
+    <h2>Featured Poll</h2>
+    <div><%= </div>
     <a id="featured-show-more" href="/polls"><p>Show More...</p></a>
   </section>
   <a href="/polls/new"><button id="create-poll-btn">Create Poll</button></a>
