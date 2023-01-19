@@ -41,6 +41,7 @@ function show(req, res) {
   Poll.findById(req.params.id)
   .populate("choices")
   .then(poll => {
+    console.log("Testing Testing:", poll.totals)
     res.render("polls/show", {
       title: "Poll",
       poll,
@@ -88,6 +89,9 @@ function deletePoll(req, res){
     res.redirect("/")
   })
 }
+// poll.totals.totalOne += result.userChoseOne ? 1 : 0
+// poll.totals.totalTwo += result.userChoseTwo ? 1 : 0
+// result.userChoseOne === true ? poll.totals.totalOne += 1 : poll.totals.totalTwo += 1
 
 function saveResult(req,res){
   const result = {
@@ -96,12 +100,18 @@ function saveResult(req,res){
     voter: req.user.profile._id
   }
   console.log("Result:", result)
- 
+  
   Poll.findById(req.params.id)
   .then(poll => {
     poll.results.push(result)
-    poll.totals.totalOne += result.userChoseOne ? 1 : 0
-    poll.totals.totalTwo += result.userChoseTwo ? 1 : 0
+    // poll.totals.totalOne = poll.totals.totalOne ? poll.totals.totalOne : 1
+    poll.results.forEach(result => {
+      result.userChoseOne ?
+        (poll.totals.totalOne ? poll.totals.totalOne += 1 : poll.totals.totalOne = 1) :
+        (poll.totals.totalTwo ? poll.totals.totalTwo += 1 : poll.totals.totalTwo = 1)
+    })
+    console.log("Vote Totals:", poll.totals)
+    console.log("Poll:", poll)
     poll.save()
     .then(() => {
       res.redirect(`/polls/${req.params.id}`)

@@ -10,6 +10,17 @@ const resultSchema = new Schema ({
   }
 })
 
+const totalSchema = new Schema ({
+  totalOne: {
+    type: Number,
+    default: 0,
+  },
+  totalTwo: {
+    type: Number,
+    default: 0, 
+  }
+})
+
 
 const pollSchema = new Schema({
   question: { 
@@ -29,15 +40,11 @@ const pollSchema = new Schema({
     choiceTwo: String,
     // required: true
   },
-  results: [resultSchema]
-  ,  
   author: { 
     type: Schema.Types.ObjectId, ref: "Profile" 
   },
-  totals: {
-    totalOne: Number,
-    totalTwo: Number, 
-  },
+  totals: [totalSchema],
+  results: [resultSchema],  
 },
   { timestamps: true}
 )
