@@ -98,11 +98,13 @@ header > a > button{
   margin-bottom: 20px;
   text-align: center;
   width: 100px;
+  font-weight: bold;
+  color: #000000c1;
 }
 
 button:hover {
   background: #f4f4f4;
-	color: #000000;
+	color: #000000c1;
 }
 
 

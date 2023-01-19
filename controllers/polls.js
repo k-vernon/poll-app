@@ -89,9 +89,6 @@ function deletePoll(req, res){
     res.redirect("/")
   })
 }
-// poll.totals.totalOne += result.userChoseOne ? 1 : 0
-// poll.totals.totalTwo += result.userChoseTwo ? 1 : 0
-// result.userChoseOne === true ? poll.totals.totalOne += 1 : poll.totals.totalTwo += 1
 
 function saveResult(req,res){
   const result = {
@@ -104,7 +101,6 @@ function saveResult(req,res){
   Poll.findById(req.params.id)
   .then(poll => {
     poll.results.push(result)
-    // poll.totals.totalOne = poll.totals.totalOne ? poll.totals.totalOne : 1
     poll.results.forEach(result => {
       result.userChoseOne ?
         (poll.totals.totalOne ? poll.totals.totalOne += 1 : poll.totals.totalOne = 1) :
@@ -127,6 +123,22 @@ function saveResult(req,res){
   })
 }
 
+function showResults(req, res) {
+  Poll.findById(req.params.id)
+  .populate("totals")
+  .then(poll => {
+    console.log("Testing Testing:", poll.totals)
+    res.render("polls/results", {
+      title: "Poll Results",
+      poll,
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect("/")
+  })
+}
+
 
 export {
   newPoll as new,
@@ -136,5 +148,6 @@ export {
   edit,
   update,
   deletePoll as delete,
-  saveResult
+  saveResult,
+  showResults
 }

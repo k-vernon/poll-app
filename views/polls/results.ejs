@@ -1,0 +1,24 @@
+<%- include('../partials/html-head') %>
+<link rel="stylesheet" href="/stylesheets/polls/results.css">
+<%- include('../partials/nav') %>
+
+<main>
+  <div class="page-container">
+    <div class="text-container">
+        <p class="question"><%= poll.question %></p>
+        <p class="description"><%= poll.description %></p>
+    </div>
+      <div class="choices-container">
+        <div class="choice-one" >
+          <div name="choiceOne"><%= poll.choices.choiceOne %> Votes:</div>
+        </div><div><%= poll.totals.totalOne %></div>
+        <div class="choice-two">
+          <div  name="choiceTwo"><%= poll.choices.choiceTwo %> Votes:</div>
+          <div><%= poll.totals.totalTwo %></div>
+        </div>
+      </div>
+    
+  </div>
+</main>
+
+<%- include('../partials/footer') %>

@@ -7,14 +7,15 @@ const router = Router()
 router.get("/", pollsCtrl.index)
 router.get("/new", pollsCtrl.new)
 router.get("/:id", pollsCtrl.show)
+router.get("/:id/results", pollsCtrl.showResults)
 router.get("/:id/edit", isLoggedIn, pollsCtrl.edit)
 
 router.post("/", pollsCtrl.create)
 
 router.delete("/:id", pollsCtrl.delete)
 
-// router.put("/:id", pollsCtrl.update)
 router.post("/:id", isLoggedIn, pollsCtrl.saveResult)
+// router.put("/:id", pollsCtrl.update)
 
 export {
   router
