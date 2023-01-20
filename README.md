@@ -44,6 +44,7 @@ Create, post, and vote on others' polls. Users can edit their polls as well as d
 
 - [ ] Add color pallete to design
 - [ ] User Profiles (Favorite polls, change display name, user's created polls, etc.)
+- [ ] More options for choices
 - [ ] Add search bar functionality
 - [ ] Sort polls by topic
 - [ ] Add animation to characters (blinking, applauding, booing)
