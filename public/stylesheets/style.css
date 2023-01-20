@@ -17,12 +17,13 @@ body {
   /* Use a system font, if none are available use any found sans-sarif font */
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
+  font-family: 'DM Sans', sans-serif;
   min-height: 800px;
 }
 
 header {
   display: flex;
-  background-color: #f4f4f4;
+  background-color: #fafafa;
   color: #1a1a1a;
   flex-direction: column;
   position: fixed;
@@ -35,10 +36,6 @@ header {
   box-shadow: rgba(193, 197, 197, 0.5) 0 2px 10px 0;
 }
 
-i {
-  opacity: 0.8;
- 
-}
 
 
 #icon {
@@ -46,8 +43,10 @@ i {
   color: black;
   cursor: pointer;
   text-align: center;
-  padding: 50px 0px;
+  padding: 40px 0px;
   opacity: 1;
+  width: 80px;
+  margin-left: 26px;
 }
 
 nav{
@@ -71,7 +70,7 @@ nav > a{
 nav > a:hover{
   text-decoration: none;
   transition: all 0.3s ease 0s;
-  color: rgb(61, 102, 120);
+  color: #42AEE4;
   background-color: #fff;
 }
 
@@ -104,7 +103,7 @@ header > a > button{
   left: 50%;
   margin-left: -50px;
   bottom: 0;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   text-align: center;
   width: 100px;
   font-weight: bold;

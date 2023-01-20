@@ -2,6 +2,41 @@
 <link rel="stylesheet" href="/stylesheets/login.css">
 <%- include('./partials/nav') %>
 
-
+<main>
+  <div id="page-container">
+      <section class="right-box">
+        <!-- <h2>Welcome to Pollix</h2> -->
+        <img src="stylesheets/images/censys.png" alt="Censys logo" class="censys">
+        <p class="slogan">Let your voice be heard with Censys:<br> the polling and surveying app that gets to the answer!</p>
+      </section>
+      <section class="left-box"><h2 class="login-with"> Login in with Google</h2>
+        <div class="google-container">
+          <% if (user) { %>
+            <a href="/auth/logout">
+              <button type="submit">Logout</button>
+            </a>
+          <% } else { %>
+            <div 
+              id="g_id_onload"
+              data-client_id="<%= googleClientID %>"
+              data-login_uri="/auth/google"
+              data-auto_prompt="false"
+              >
+            </div>
+            <div 
+              class="g_id_signin"
+              data-type="standard"
+              data-size="large"
+              data-theme="outline"
+              data-text="sign_in_with"
+              data-shape="circle"
+              data-logo_alignment="left"
+              >
+            </div> 
+          <% } %> 
+      </section> 
+    </div>
+  </div>
+</main>
 
 <%- include('./partials/footer') %>

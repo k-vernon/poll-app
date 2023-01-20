@@ -9,7 +9,7 @@ router.get('/', function (req, res) {
   .sort({ createdAt: "desc" })
   .then(polls => {
     res.render('index', { 
-      title: 'Poll App',
+      title: 'Censys: Polling app',
       polls
     })
   })

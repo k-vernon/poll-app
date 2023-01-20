@@ -3,13 +3,13 @@
 <%- include('./partials/nav') %>
 
 <main>
-  <!-- <h1>Poll App</h1> -->
+  <img class="censys" src="stylesheets/images/censys.png" alt="Censys logo">
   <% if (user) { %>
     <h2 id="welcome"> Welcome back, <%=user.profile.name%>!</h4>
   <% } %>
   <form>
     <input id="search-input" autocomplete="off" placeholder="Search" type="text">
-    <button><i class="fa-solid fa-magnifying-glass fa-2x"></i></button>
+    <button><i id="search-icon" class="fa-solid fa-magnifying-glass fa-2x"></i></button>
   </form>
   <h2 id="topics-title">Topics</h2>
   <section id="topics-container">
@@ -26,7 +26,7 @@
   </section> -->
   <section id="newest-polls">
     <h2>Newest Polls</h2>
-    <% for (let i = 0; i < 5 ; i++ ){ %>
+    <% for (let i = 0; i < 1 ; i++ ){ %>
       <a  href="/polls/<%= polls[i]._id %>">
         <div class="newest-polls-container">
           <h2 class="box-contents"><%= polls[i].question %></h2>

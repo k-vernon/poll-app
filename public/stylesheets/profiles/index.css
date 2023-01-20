@@ -1,4 +1,6 @@
 #page-container {
+  display: flex;
+  flex-direction: column;
 	width: 800px;
   font-size: 15px;
   margin-top: 8%;
@@ -8,10 +10,24 @@
   transform: scale(1.2);
   box-shadow: rgba(213, 217, 217, .5) 0 2px 5px 0;
   border-radius: 8px;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
 }
 
+.gif {
+  align-content: center;
+  justify-content: center;
+}
 
+.box-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 15px;
+}
 
-.box-contents {
-  text-align: center;
+.box-text {
+  font-size: 15px;
+  
 }

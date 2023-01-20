@@ -12,6 +12,13 @@ main {
   color: black;
 }
 
+.censys {
+  width: 300px;
+  margin-left: 70px;
+  padding: 0px 0px 15px 0px;
+  
+}
+
 #welcome {
   margin-left: 70px;
 }
@@ -32,12 +39,17 @@ form > button:hover {
 
 #search-input{
   align-items: center;
+  border-style: solid;
   margin-left: 70px;
   width: 500px;
   height: 40px;
   border-radius: 40px;
   padding: 10px 15px;
-  border-color: black;
+  border: 2px solid rgb(119, 119, 119);
+}
+
+#search-icon {
+  opacity: 0.5;
 }
 
 
@@ -109,10 +121,10 @@ form > button:hover {
   display: flex;
   flex-direction: column;
   position: absolute;
-  margin: 350px 70px 300px 830px;
+  margin: 350px 70px 20% 830px;
   height: 580px;
   width: 280px;
-  background-color: rgb(255, 255, 255);
+  background-color: #fafafa;
   border-radius: 40px;
   box-shadow: rgba(213, 217, 217, .5) 0 2px 5px 0;
 }
@@ -179,9 +191,8 @@ a {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  border: 1px solid #d5d9d9;
   border-radius: 8px;
-  padding: 10px;
+  padding: 10px 15px;
   align-items: center;
   background-color: rgb(255, 255, 255);
 
@@ -235,10 +246,11 @@ a {
   position: relative;
   bottom: 0;
   margin-left: 400px;
-  margin-bottom: -50px;
+  margin-bottom: 80px;
   text-align: center;
   width: 100px;
   transition: none;
+  
 }
 
 #create-poll-btn:hover {

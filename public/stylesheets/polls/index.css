@@ -11,7 +11,8 @@
 }
 
 .page-title {
-  margin-left: 20px;
+  /* margin-left: 20px; */
+  text-align: center;
 }
 
 .poll-container {

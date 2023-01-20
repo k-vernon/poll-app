@@ -4,7 +4,7 @@
 </head>
 <body>
   <header>
-    <a id="icon" href="/"><i href="/index" class="fa-solid fa-square-poll-vertical fa-4x" style="--fa-primary-color: blue;"></i></a>
+    <a  href="/"><img id="icon" src="/stylesheets/images/iconCM.png" alt=""></a>
     <nav>
       <a id="top-nav"
         href="/" <%- title === "Profile" ? 'class="active"' : "" %>
@@ -41,22 +41,8 @@
         <button type="submit">Logout</button>
       </a>
     <% } else { %>
-      <div 
-        id="g_id_onload"
-        data-client_id="<%= googleClientID %>"
-        data-login_uri="/auth/google"
-        data-auto_prompt="false"
-        >
-      </div>
-      <div 
-        class="g_id_signin"
-        data-type="standard"
-        data-size="large"
-        data-theme="outline"
-        data-text="sign_in_with"
-        data-shape="rectangular"
-        data-logo_alignment="left"
-        >
-      </div>
+      <a href="/login">
+        <button>Login</button>
+      </a>
     <% } %>
   </header>
