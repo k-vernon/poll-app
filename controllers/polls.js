@@ -123,7 +123,7 @@ function saveResult(req,res){
     console.log("Poll:", poll)
     poll.save()
     .then(() => {
-      res.redirect(`/polls/${req.params.id}`)
+      res.redirect(`/polls/${req.params.id}/results`)
     })
     .catch(err => {
       console.log(err)
