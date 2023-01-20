@@ -12,7 +12,7 @@ function newPoll(req, res){
 
 
 function create(req, res){
-  
+
   req.body.author = req.user.profile._id
   req.body.description = req.body.description ? req.body.description : 'No description'
   req.body.totals = {totalOne: 0, totalTwo: 0}
@@ -32,6 +32,7 @@ function create(req, res){
 
 function index(req, res){
   Poll.find({})
+  .sort({ createdAt: "desc" })
   .then(poll => {
     res.render("polls/index", {
       title: "All Polls",

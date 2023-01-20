@@ -8,8 +8,8 @@
     <h2 id="welcome"> Welcome back, <%=user.profile.name%>!</h4>
   <% } %>
   <form>
-  <input id="search-input" autocomplete="off" placeholder="Search" type="text">
-  <button><i class="fa-solid fa-magnifying-glass fa-2x"></i></button>
+    <input id="search-input" autocomplete="off" placeholder="Search" type="text">
+    <button><i class="fa-solid fa-magnifying-glass fa-2x"></i></button>
   </form>
   <h2 id="topics-title">Topics</h2>
   <section id="topics-container">
@@ -24,7 +24,6 @@
     <div id="topic-content-popup"><i class="fa-solid fa-question fa-2x"></i></div>
     <div id="topic-content-popup"><i class="fa-regular fa-face-laugh-squint fa-2x"></i></div>
   </section> -->
-  </div>
   <section id="newest-polls">
     <h2>Newest Polls</h2>
     <% for (let i = 0; i < 5 ; i++ ){ %>
@@ -34,7 +33,6 @@
         </div>
       </a>
     <% } %>
-
     <a id="newest-show-more" href="/polls">
       <p class="newest-show-more">Show More...</p>
     </a>

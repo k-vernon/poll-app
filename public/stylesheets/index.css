@@ -205,6 +205,10 @@ a {
 
 }
 
+.featured-votes:hover {
+  opacity: 0.7;
+}
+
 
 .featured-show-more {
   font-size: 30px;
