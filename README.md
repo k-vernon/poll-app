@@ -1,6 +1,12 @@
 # <p style="font-size: 40px;">Censys</p>
-## <p style= "text-align: center;"> [Launch App](https://clue-three.netlify.app/)</p>
-![Clue Three Image](https://i.imgur.com/4PiGrUp.png)
+## <p style= "text-align: center;"> [Launch App](https://pollapp.fly.dev/)</p>
+<p>Home Page Preview</P>
+
+![Censys Image](https://i.imgur.com/4PiGrUp.png)
+
+<p>Planning Preview</P>
+
+![Censys Image](https://i.imgur.com/y8szd2u.png)
 
 <p> Let your voice be heard with Censys: the polling and surveying app that gets to the answer! <br>
 
@@ -8,7 +14,7 @@ Create, post, and vote on others' polls. Users can edit their polls as well as d
  </p>
 
 
-## <p style= "text-align: center;"> [Launch App](https://clue-three.netlify.app/)</p> <p style= "text-align: center; font-size: 20px"> [See The Plan](https://trello.com/b/2DOBgbT7/polling-app-planning)</p>
+## <p style= "text-align: center;"> [Launch App](https://pollapp.fly.dev/)</p> <p style= "text-align: center; font-size: 20px"> [See The Plan](https://trello.com/b/2DOBgbT7/polling-app-planning)</p>
 
 ## Technologies Used
 
