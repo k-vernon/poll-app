@@ -3,7 +3,7 @@
 <%- include('./partials/nav') %>
 
 <main>
-  <img class="censys" src="stylesheets/images/censys.png" alt="Censys logo">
+  <img class="censys" src="/stylesheets/images/censys.png" alt="Censys logo">
   <% if (user) { %>
     <h2 id="welcome"> Welcome back, <%=user.profile.name%>!</h4>
   <% } %>
@@ -38,7 +38,7 @@
     </a>
   </section>
   <section id="featured-poll">
-    <h2>Featured Poll</h2>
+    <h2 class="featured-header">Featured Poll</h2>
     <% for (let i = 0; i < 1; i++ ){ %>
       <a  href="/polls/<%= polls[i]._id %>">
         <div class="featured-poll-container">

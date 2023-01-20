@@ -91,6 +91,19 @@ font-weight: bold;
 
 }
 
+
+.submit-vote-btn {
+  background-color: rgb(30, 91, 222);
+  color: white;
+  font-weight: bold;
+  
+}
+
+.submit-vote-btn:hover {
+  background-color: rgb(70, 116, 215);
+  color:white;
+}
+
 .see-results {
   text-decoration: underline;
   font-size: 12px;

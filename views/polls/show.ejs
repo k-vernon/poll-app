@@ -22,13 +22,13 @@
       method="POST">
       <div class="choices-container">
         <div class="choice-one" >
-          <input type="radio" name="choiceOne"><%= poll.choices.choiceOne %></input>
+          <input id="checkbox" type="checkbox" name="choiceOne"><%= poll.choices.choiceOne %></input>
         </div>
         <div class="choice-two">
-          <input  type="radio" name="choiceTwo"><%= poll.choices.choiceTwo %></input>
+          <input id="checkbox" type="checkbox" name="choiceTwo"><%= poll.choices.choiceTwo %></input>
         </div>
       </div>
-      <button type="submit">Submit</button>
+      <button class="submit-vote-btn" type="submit" onclick="">Submit</button>
       <a class="see-results" href="/polls/<%= poll._id %>/results"><div>See Results</div></a>
     </form>
     

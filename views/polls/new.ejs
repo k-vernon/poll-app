@@ -14,7 +14,7 @@
       <!-- QUESTION FIELD -->
       <label form="poll-form">
         <span>Question:<span id="required">*</span></span>
-        <input required class="question-field" type="text" name="question"/>
+        <input required autofocus autocomplete="off" class="question-field" type="text" name="question"/>
       </label>
       
 
@@ -40,8 +40,8 @@
         <span class="choices-text"> Choices:<span id="required">*</span> 
         </span>
         <div class="choices-container">
-          <input required type="text" name="choices.choiceOne" class="choices-field" placeholder="Choice 1"/>
-          <input required type="text" name="choices.choiceTwo" class="choices-field" placeholder="Choice 2"/>
+          <input required autocomplete="off" type="text" name="choices.choiceOne" class="choices-field" placeholder="Choice 1"/>
+          <input required autocomplete="off" type="text" name="choices.choiceTwo" class="choices-field" placeholder="Choice 2"/>
         </div>
       </label>
       
