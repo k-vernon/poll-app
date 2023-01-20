@@ -42,12 +42,12 @@
   <section id="featured-poll">
     <h2>Featured Poll</h2>
     <% for (let i = 0; i < 1; i++ ){ %>
-      <div class="featured-poll-container">
-        <a  href="/polls/<%= polls[i]._id %>">
+      <a  href="/polls/<%= polls[i]._id %>">
+        <div class="featured-poll-container">
           <h2 class="featured-box-contents"><%= polls[i].question %></h2>
-        </a>
-        <div class="featured-votes">Votes: <%= polls[i].totals.totalOne + polls[i].totals.totalTwo %></div>
-      </div>
+          <div class="featured-votes">Votes: <%= polls[i].totals.totalOne + polls[i].totals.totalTwo %></div>
+        </div>
+      </a>
     <% } %>
     <a id="featured-show-more" href="/polls"><p>Show More...</p></a>
   </section>

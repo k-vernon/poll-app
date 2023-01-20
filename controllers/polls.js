@@ -8,7 +8,11 @@ function newPoll(req, res){
   })
 }
 
+
+
+
 function create(req, res){
+  
   req.body.author = req.user.profile._id
   req.body.description = req.body.description ? req.body.description : 'No description'
   req.body.totals = {totalOne: 0, totalTwo: 0}
@@ -22,7 +26,9 @@ function create(req, res){
     console.log(err)
     res.redirect("/")
   })
+
 }
+  
 
 function index(req, res){
   Poll.find({})
@@ -92,6 +98,7 @@ function deletePoll(req, res){
 }
 
 function saveResult(req,res){
+
   const result = {
     userChoseOne: req.body.choiceOne === "on" ? true : false,
     userChoseTwo: req.body.choiceTwo === "on" ? true : false,
@@ -126,7 +133,10 @@ function saveResult(req,res){
     console.log(err)
     res.redirect("/")
   })
+
+
 }
+
 
 function showResults(req, res) {
   Poll.findById(req.params.id)

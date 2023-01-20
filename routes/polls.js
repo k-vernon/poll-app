@@ -10,12 +10,12 @@ router.get("/:id", pollsCtrl.show)
 router.get("/:id/results", pollsCtrl.showResults)
 router.get("/:id/edit", isLoggedIn, pollsCtrl.edit)
 
-router.post("/", pollsCtrl.create)
+router.post("/", isLoggedIn, pollsCtrl.create)
 
-router.delete("/:id", pollsCtrl.delete)
+router.delete("/:id", isLoggedIn, pollsCtrl.delete)
 
 router.post("/:id", isLoggedIn, pollsCtrl.saveResult)
-// router.put("/:id", pollsCtrl.update)
+router.put("/:id", isLoggedIn, pollsCtrl.update)
 
 export {
   router

@@ -18,6 +18,13 @@ router.get('/', function (req, res) {
   })
 })
 
+router.get('/login', function (req, res){
+  console.log("Login please!")
+  res.render("login", {
+    title: "Login"
+  })
+
+})
 
 export {
   router
