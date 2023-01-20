@@ -6,10 +6,10 @@ const router = Router()
 router.get('/', function (req, res) {
   req.body.total = {totalOne: 0, totalTwo: 0}
   Poll.find({})
-  .then(poll => {
+  .then(polls => {
     res.render('index', { 
       title: 'Poll App',
-      poll
+      polls
     })
   })
   .catch(err => {

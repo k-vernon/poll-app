@@ -133,6 +133,7 @@ form > button:hover {
   border-radius: 8px;
   padding: 10px;
   margin: 0px 20px 10px 20px ;
+  color: #000000;
   
 }
 
@@ -182,16 +183,28 @@ a {
   border-radius: 8px;
   padding: 10px;
   align-items: center;
+  background-color: rgb(255, 255, 255);
+
+}
+
+.featured-poll-container:hover {
+  background-color: #f4f4f4;
+  box-shadow: rgba(213, 217, 217, .5) 0 2px 5px 0;
 }
 
 .featured-box-contents {
   font-size: 15px;
   text-decoration: none;
+  color: #000000;
 }
 
-#featured-votes {
+.featured-votes {
   align-self: center;
+  font-size: 14px;
+  opacity: 0.3;
+
 }
+
 
 .featured-show-more {
   font-size: 30px;

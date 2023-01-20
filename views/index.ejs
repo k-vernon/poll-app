@@ -27,10 +27,10 @@
   </div>
   <section id="newest-polls">
     <h2>Newest Polls</h2>
-    <% for (let i = 0; i < 2; i++ ){ %>
-      <a  href="/polls/<%= poll._id %>">
+    <% for (let i = 0; i < 5 ; i++ ){ %>
+      <a  href="/polls/<%= polls[i]._id %>">
         <div class="newest-polls-container">
-          <h2 class="box-contents"><%= poll[i].question %></h2>
+          <h2 class="box-contents"><%= polls[i].question %></h2>
         </div>
       </a>
     <% } %>
@@ -43,10 +43,10 @@
     <h2>Featured Poll</h2>
     <% for (let i = 0; i < 1; i++ ){ %>
       <div class="featured-poll-container">
-        <a  href="/polls/<%= poll._id %>">
-          <h2 class="featured-box-contents"><%= poll[i].question %></h2>
+        <a  href="/polls/<%= polls[i]._id %>">
+          <h2 class="featured-box-contents"><%= polls[i].question %></h2>
         </a>
-        <div class="featured-votes">Votes: <%= poll.length %></div>
+        <div class="featured-votes">Votes: <%= polls[i].totals.totalOne + polls[i].totals.totalTwo %></div>
       </div>
     <% } %>
     <a id="featured-show-more" href="/polls"><p>Show More...</p></a>
