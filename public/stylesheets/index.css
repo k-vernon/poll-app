@@ -137,7 +137,7 @@ form > button:hover {
   font-weight: 700;
   border-top: none;
   /* border-bottom: 5px solid #efefef; */
-  padding: 10px 0px 10px 0px;
+  padding: 10px 0px 0px 0px;
   justify-content: center;
 }
 
