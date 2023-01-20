@@ -127,6 +127,7 @@ form > button:hover {
   background-color: #fafafa;
   border-radius: 40px;
   box-shadow: rgba(213, 217, 217, .5) 0 2px 5px 0;
+
 }
 
 #newest-polls > h2 {
@@ -144,6 +145,7 @@ form > button:hover {
   border: 1px solid #d5d9d9;
   border-radius: 8px;
   padding: 10px;
+  
   margin: 0px 20px 10px 20px ;
   color: #000000;
   
@@ -171,7 +173,7 @@ a {
 
 
 .newest-show-more {
-  margin: 0px 0px 30px 30px;
+  margin: 0px 0px -40px 30px;
   position: absolute;
   bottom: 0;
 }
@@ -210,7 +212,10 @@ a {
 }
 
 .featured-votes {
+  display: flex;
   align-self: center;
+  justify-content: center;
+  text-align: center;
   font-size: 14px;
   opacity: 0.3;
 
